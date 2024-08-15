@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantify</title>
+
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- webpage icon -->
+    <link rel="icon" type="image/png" href="./assets/Logo.png">
+</head>
+<body class="before:fixed before:z-[999] before:content-['Sorry_but_this_device_is_not_supported'] before:max-w-[100px] before:px-[32px] before:text-[25px] before:text-center before:text-white before:flex before:justify-center before:items-center before:font-bold before:min-h-full before:min-w-full before:bg-black min-[330px]:before:hidden">
+    <!-- header start -->
+    <header class="fixed w-full text-white bg-[#004F44] z-50">
+        <div class="container mx-auto px-8 max-w-[1158px]">
+            <nav class="flex items-center py-[21px] max-lg:justify-between">
+                <ul id="nav_collection" class="flex gap-10 duration-500 max-lg:translate-x-[-100%] max-lg:flex-col max-lg:absolute max-lg:py-[50px] max-lg:px-[80px] max-lg:top-0 max-lg:left-0 max-lg:text-center max-lg:text-3xl max-lg:bg-[#346456] max-lg:min-h-[100vh]">
+                    <li>
+                        <a href="">Shop</a>
+                    </li>
+                    <li>
+                        <select name="Products" class="bg-transparent outline-none cursor-pointer" id="nav_products">
+                            <option value="null" class="text-[#004F44] text-lg font-semibold">Products</option>
+                            <option value="Flowers" class="text-[#004F44] text-lg font-semibold">Flowers</option>
+                            <option value="Plants" class="text-[#004F44] text-lg font-semibold">Plants</option>
+                        </select>
+                    </li>
+                    <li>
+                        <a href="">Fertilizer</a>
+                    </li>
+                    <li>
+                        <a href="">Guide</a>
+                    </li>
+
+                    <div class="flex-col gap-[20px] hidden max-lg:flex max-lg:items-center">
+                        <li class="cursor-pointer">
+                            <img src="./assets/search.svg" alt="search">
+                        </li>
+    
+                        <li class="cursor-pointer relative" id="nav_user">
+                            <img src="./assets/user.svg" alt="user">
+                            
+                            <div class="absolute rounded-lg flex-col mt-3 gap-2 hidden" id="user_dropdown">
+                                <a href="./login.html">
+                                    <button class="rounded text-sm py-2 shadow-[0px_0px_24px_5px_#4d7c0f] bg-[#004F44] w-32">Log in</button>
+                                </a>
+                                <a href="./signin.html">
+                                    <button class="rounded text-sm py-2 shadow-[0px_0px_24px_5px_#4d7c0f]  bg-[#004F44] w-32">Sign in</button>
+                                </a>
+                            </div>
+                        </li>
+    
+                        <li class="cursor-pointer">
+                            <img src="./assets/shopping_cart.svg" alt="shopping_cart">
+                        </li>
+                    </div>
+
+                    <li id="nav_close" class="text-[35px] hidden max-lg:block">
+                        ✕
+                    </li>
+                </ul>
+                    
+                
+                <div class="flex-1 ml-[13%] max-lg:ml-0 max-lg:flex-none">
+                    <a href="#">
+                        <img src="./assets/Logo.png" alt="Logo">
+                    </a>
+                </div>
+
+                <div class="text-3xl hidden max-lg:block" id="nav_menu">☰</div>
+
+                <ul class="flex gap-[14px] max-lg:hidden">
+                    <li class="cursor-pointer">
+                        <img src="./assets/search.svg" alt="search">
+                    </li>
+
+                    <li class="cursor-pointer relative" id="nav_user">
+                        <img src="./assets/user.svg" alt="user">
+                        
+                        <div class="absolute rounded-lg bg-[#346456] flex-col px-10 py-5 right-0 mt-3 gap-2 hidden" id="user_dropdown">
+                            <a href="./login.html">
+                                <button class="rounded px-8 py-3 shadow-[0px_0px_24px_5px_#4d7c0f] bg-[#004F44] w-32">Log in</button>
+                            </a>
+                            <a href="./signin.html">
+                                <button class="rounded px-8 py-3 shadow-[0px_0px_24px_5px_#4d7c0f]  bg-[#004F44] w-32">Sign in</button>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="cursor-pointer">
+                        <img src="./assets/shopping_cart.svg" alt="shopping_cart">
+                    </li>
+                </ul>
+            </nav>            
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- main start -->
+    <main>
+        <!-- hero start -->
+        <section class="bg-[#004F44] pt-[199px] pb-[93px]">
+            <div class="container mx-auto px-8 max-w-[1158px]">
+                <div class="flex items-center justify-between max-xl:flex-col-reverse">
+
+                    <div class="text-white max-xl:text-center flex flex-col max-xl:items-center">
+                        <h1 class="max-w-[420px] text-[64px] font-medium max-xl:max-w-[600px] max-sm:text-[48px] max-sm:max-w-[420px] max-[360px]:text-[32px]">Happiness blooms from within</h1>
+                        <p class="max-w-[420px]">Our environment, the world in which we live and work, is a mirror of our attitudes and expectations.</p>
+
+
+                        <div class="flex gap-[43px] mt-[32px] max-sm:gap-[20px]">
+                            <button class="bg-[#EFF7F5] px-[41px] py-[19px] text-[#004F44] max-sm:px-[30px] max-sm:py-[10px] max-[360px]:px-[14px]">Shop now</button>
+                            <button>Explore plants →</button>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 gap-[4px] max-xl:grid-cols-1 max-md:flex">
+
+                        <div class="relative col-start-1 col-end-2 max-md:hidden">
+                            <div class="object-cover max-w-[223px] w-full">
+                                <img class="w-full" src="./assets/hero1.png" alt="plant">
+                            </div>
+                            <div class="absolute px-[15px] py-[7px] bg-[#004F44] text-white text-[12px] top-[12px] left-[15px]">New</div>
+                        </div>
+
+                        <div class="relative col-start-2 col-end-4 row-start-1 row-end-3 overflow-hidden">
+                            <div class="object-cover max-w-[379px] w-full">
+                                <img class="w-full" src="./assets/hero3.png" alt="plant">
+                            </div>
+                            <div class="absolute max-w-[379px] w-full px-[25px] bottom-0 bg-gradient-to-t from-[#2E403D_25%] to-[rgba(46, 64, 61, 0)_75%] pt-[132px] pb-[26px] text-white flex flex-col items-center">
+                                <h3 class="text-[28px] self-start max-md:self-auto">Anthurium Flower</h3>
+                                <p class="text-[14px] mt-[6px] max-w-[275px] self-start max-md:self-auto max-md:text-center">The flower of human being. It has meaningful of fact that the plant always grow whatever season and weather...</p>
+                                <button class="py-[17px] px-[115px] self-start bg-white text-[#004F44] text-xs mt-[18px] max-md:self-auto max-sm:px-[40px] max-sm:py-[10px]">READ MORE</button>
+                            </div>
+                            <div class="absolute px-[15px] py-[7px] bg-[#004F44] text-white text-[12px] top-[12px] left-[15px]">Featured</div>
+                        </div>
+
+                        <div class="relative col-start-1 col-end-2 max-md:hidden">
+                            <div class="object-cover max-w-[223px] w-full">
+                                <img class="w-full" src="./assets/hero2.png" alt="plant">
+                            </div>
+                            <div class="absolute px-[15px] py-[7px] bg-[#004F44] text-white text-[12px] top-[12px] left-[15px]">Popular</div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- hero end -->
+
+        <!-- featured start -->
+        <section class="pt-[70px] pb-[95px]">
+            <div class="container mx-auto px-8 max-w-[1158px]">
+                <div class="flex justify-between">
+                    <h1 class="text-[#004F44] text-[40px]">Featured</h1>
+                    <a href="" class="text-[#004F44] text-[24px]">view all</a>
+                </div>
+
+                <div class="overflow-auto flex gap-[28px] mt-[48px] pb-5">
+
+                    <div>
+                        <div class="object-cover min-w-[279px]">
+                            <img src="./assets/features1.png" alt="plant" class="w-full">
+                        </div>
+
+                        <div class="mt-5">
+                            <div class="flex justify-between text-[20px] text-[#004F44]">
+                                <h3>Peperomia Ginny</h3>
+                                <p>$25</p>
+                            </div>
+
+                            <div class="flex justify-between mt-[38px]">
+                                <div>
+                                    <p class="text-[#9EA9A7]">Pot color</p>
+                                    <div class="flex gap-[5px] mt-[8px]">
+                                        <div class="h-4 w-4 rounded-full bg-[#39362E] cursor-pointer"></div>
+                                        <div class="h-4 w-4 rounded-full bg-[#F3A195] cursor-pointer"></div>
+                                        <div class="h-4 w-4 rounded-full bg-[#EFEAE6] cursor-pointer"></div>
+                                        <div class="h-4 w-4 rounded-full bg-[#C38364] cursor-pointer"></div>
+                                    </div>
+                                </div>
+                                
+                                <button class="py-2 px-6 text-white bg-[#004F44] duration-200 hover:text-[#004F44] hover:bg-transparent hover:border hover:border-[#004F44]">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="object-cover min-w-[279px]">
+                            <img src="./assets/features2.png" alt="plant" class="w-full">
+                        </div>
+
+                        <div class="mt-5">
+                            <div class="flex justify-between text-[20px] text-[#004F44]">
+                                <h3>Bird’s Nest Fern</h3>
+                                <p>$45</p>
+                            </div>
+
+                            <div class="flex justify-between mt-[38px]">
+                                <div>
+                                    <p class="text-[#9EA9A7]">Pot color</p>
+                                    <div class="flex gap-[5px] mt-[8px]">
+                                        <div class="h-4 w-4 rounded-full bg-[#39362E] cursor-pointer"></div>
+                                        <div class="h-4 w-4 rounded-full bg-[#F3A195] cursor-pointer"></div>
+                                        <div class="h-4 w-4 rounded-full bg-[#EFEAE6] cursor-pointer"></div>
+                                        <div class="h-4 w-4 rounded-full bg-[#C38364] cursor-pointer"></div>
+                                    </div>
+                                </div>
+                                
+                                <button class="py-2 px-6 text-white bg-[#004F44] duration-200 hover:text-[#004F44] hover:bg-transparent hover:border hover:border-[#004F44]">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="object-cover min-w-[279px]">
+                            <img src="./assets/features3.png" alt="plant" class="w-full">
+                        </div>
+
+                        <div class="mt-5">
+                            <div class="flex justify-between text-[20px] text-[#004F44]">
+                                <h3>Large Majesty Palm</h3>
+                                <p>$52</p>
+                            </div>
+
+                            <div class="flex justify-between mt-[38px]">
+                                <div>
+                                    <p class="text-[#9EA9A7]">Pot color</p>
+                                    <div class="flex gap-[5px] mt-[8px]">
+                                        <div class="h-4 w-4 rounded-full bg-[#39362E] cursor-pointer"></div>
+                                        <div class="h-4 w-4 rounded-full bg-[#F3A195] cursor-pointer"></div>
+                                        <div class="h-4 w-4 rounded-full bg-[#EFEAE6] cursor-pointer"></div>
+                                        <div class="h-4 w-4 rounded-full bg-[#C38364] cursor-pointer"></div>
+                                    </div>
+                                </div>
+                                
+                                <button class="py-2 px-6 text-white bg-[#004F44] duration-200 hover:text-[#004F44] hover:bg-transparent hover:border hover:border-[#004F44]">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="object-cover min-w-[279px]">
+                            <img src="./assets/features4.png" alt="plant" class="w-full">
+                        </div>
+
+                        <div class="mt-5">
+                            <div class="flex justify-between text-[20px] text-[#004F44]">
+                                <h3>Pet Friendly Plant</h3>
+                                <p>$30</p>
+                            </div>
+
+                            <div class="flex justify-between mt-[38px]">
+                                <div>
+                                    <p class="text-[#9EA9A7]">Pot color</p>
+                                    <div class="flex gap-[5px] mt-[8px]">
+                                        <div class="h-4 w-4 rounded-full bg-[#39362E] cursor-pointer"></div>
+                                        <div class="h-4 w-4 rounded-full bg-[#F3A195] cursor-pointer"></div>
+                                        <div class="h-4 w-4 rounded-full bg-[#EFEAE6] cursor-pointer"></div>
+                                        <div class="h-4 w-4 rounded-full bg-[#C38364] cursor-pointer"></div>
+                                    </div>
+                                </div>
+                                
+                                <button class="py-2 px-6 text-white bg-[#004F44] duration-200 hover:text-[#004F44] hover:bg-transparent hover:border hover:border-[#004F44]">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="object-cover min-w-[279px]">
+                            <img src="./assets/features1.png" alt="plant" class="w-full">
+                        </div>
+
+                        <div class="mt-5">
+                            <div class="flex justify-between text-[20px] text-[#004F44]">
+                                <h3>Peperomia Ginny</h3>
+                                <p>$25</p>
+                            </div>
+
+                            <div class="flex justify-between mt-[38px]">
+                                <div>
+                                    <p class="text-[#9EA9A7]">Pot color</p>
+                                    <div class="flex gap-[5px] mt-[8px]">
+                                        <div class="h-4 w-4 rounded-full bg-[#39362E] cursor-pointer"></div>
+                                        <div class="h-4 w-4 rounded-full bg-[#F3A195] cursor-pointer"></div>
+                                        <div class="h-4 w-4 rounded-full bg-[#EFEAE6] cursor-pointer"></div>
+                                        <div class="h-4 w-4 rounded-full bg-[#C38364] cursor-pointer"></div>
+                                    </div>
+                                </div>
+                                
+                                <button class="py-2 px-6 text-white bg-[#004F44] duration-200 hover:text-[#004F44] hover:bg-transparent hover:border hover:border-[#004F44]">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="object-cover min-w-[279px]">
+                            <img src="./assets/features2.png" alt="plant" class="w-full">
+                        </div>
+
+                        <div class="mt-5">
+                            <div class="flex justify-between text-[20px] text-[#004F44]">
+                                <h3>Bird’s Nest Fern</h3>
+                                <p>$45</p>
+                            </div>
+
+                            <div class="flex justify-between mt-[38px]">
+                                <div>
+                                    <p class="text-[#9EA9A7]">Pot color</p>
+                                    <div class="flex gap-[5px] mt-[8px]">
+                                        <div class="h-4 w-4 rounded-full bg-[#39362E] cursor-pointer"></div>
+                                        <div class="h-4 w-4 rounded-full bg-[#F3A195] cursor-pointer"></div>
+                                        <div class="h-4 w-4 rounded-full bg-[#EFEAE6] cursor-pointer"></div>
+                                        <div class="h-4 w-4 rounded-full bg-[#C38364] cursor-pointer"></div>
+                                    </div>
+                                </div>
+                                
+                                <button class="py-2 px-6 text-white bg-[#004F44] duration-200 hover:text-[#004F44] hover:bg-transparent hover:border hover:border-[#004F44]">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="object-cover min-w-[279px]">
+                            <img src="./assets/features3.png" alt="plant" class="w-full">
+                        </div>
+
+                        <div class="mt-5">
+                            <div class="flex justify-between text-[20px] text-[#004F44]">
+                                <h3>Large Majesty Palm</h3>
+                                <p>$52</p>
+                            </div>
+
+                            <div class="flex justify-between mt-[38px]">
+                                <div>
+                                    <p class="text-[#9EA9A7]">Pot color</p>
+                                    <div class="flex gap-[5px] mt-[8px]">
+                                        <div class="h-4 w-4 rounded-full bg-[#39362E] cursor-pointer"></div>
+                                        <div class="h-4 w-4 rounded-full bg-[#F3A195] cursor-pointer"></div>
+                                        <div class="h-4 w-4 rounded-full bg-[#EFEAE6] cursor-pointer"></div>
+                                        <div class="h-4 w-4 rounded-full bg-[#C38364] cursor-pointer"></div>
+                                    </div>
+                                </div>
+                                
+                                <button class="py-2 px-6 text-white bg-[#004F44] duration-200 hover:text-[#004F44] hover:bg-transparent hover:border hover:border-[#004F44]">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="object-cover min-w-[279px]">
+                            <img src="./assets/features4.png" alt="plant" class="w-full">
+                        </div>
+
+                        <div class="mt-5">
+                            <div class="flex justify-between text-[20px] text-[#004F44]">
+                                <h3>Pet Friendly Plant</h3>
+                                <p>$30</p>
+                            </div>
+
+                            <div class="flex justify-between mt-[38px]">
+                                <div>
+                                    <p class="text-[#9EA9A7]">Pot color</p>
+                                    <div class="flex gap-[5px] mt-[8px]">
+                                        <div class="h-4 w-4 rounded-full bg-[#39362E] cursor-pointer"></div>
+                                        <div class="h-4 w-4 rounded-full bg-[#F3A195] cursor-pointer"></div>
+                                        <div class="h-4 w-4 rounded-full bg-[#EFEAE6] cursor-pointer"></div>
+                                        <div class="h-4 w-4 rounded-full bg-[#C38364] cursor-pointer"></div>
+                                    </div>
+                                </div>
+                                
+                                <button class="py-2 px-6 text-white bg-[#004F44] duration-200 hover:text-[#004F44] hover:bg-transparent hover:border hover:border-[#004F44]">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- featured end -->
+
+        <!-- search start -->
+        <section class="bg-[#F3FFFC] py-[85px]">
+            <div class="container mx-auto px-8 max-w-[1158px]">
+                <form class="flex items-center gap-[15px]">
+                    <label for="search_input" class="cursor-pointer p-[7.38px] border border-[#004F44] flex justify-center items-center min-h-[59px]">
+                        <img src="./assets/search_option.svg" alt="options">
+                    </label>
+
+                    <input type="text" placeholder="Search flowers..." class="py-[18px] px-[27px] text-[#004F44] border border-[#004F44] outline-none max-w-[1300px] w-full" id="search_input" required>
+
+                    <button type="submit" class="p-4 bg-[#004F44] border border-[#004F44]">
+                        <img src="./assets/search.svg" alt="search" class="h-7 w-7">
+                    </button>
+                </form>
+            </div>
+        </section>
+        <!-- search end -->
+
+        <!-- colorful_cards start -->
+        <section class="py-24">
+            <div class="container mx-auto px-8 max-w-[1158px]">
+                <div class="flex justify-between items-end">
+                    <h1 class="text-[#004F44] text-[40px]">Colorful New Arrivals</h1>
+                    <a href="" class="text-[#004F44] text-[24px]">view all</a>
+                </div>
+
+                <div class="grid grid-cols-4 gap-6 justify-between mt-[68px] items-center max-xl:grid-cols-2 max-sm:flex max-sm:flex-col">
+
+                    <div class="group object-cover relative min-w-[268px] max-w-[350px] w-full max-xl:justify-self-end max-sm:origin-center overflow-hidden">
+                        <img src="./assets/colorful1.png" alt="" class="w-full">
+                        <div class="group-hover:translate-y-0 translate-y-[100%] duration-500 h-full w-full flex flex-col items-center justify-center text-center gap-3 bg-[#012C26B5] absolute top-0 left-0">
+                            <h1 class="text-white text-[29px]">Blue Lily</h1>
+                            <p class="text-white"><a href="">more information →</a></p>
+                        </div>
+                    </div>
+
+                    <div class="group object-cover relative min-w-[268px] max-w-[350px] w-full  max-sm:origin-center overflow-hidden">
+                        <img src="./assets/colorful2.png" alt="" class="w-full">
+                        <div class="group-hover:translate-y-0 translate-y-[100%] duration-500 h-full w-full flex flex-col items-center justify-center text-center gap-3 bg-[#012C26B5] absolute top-0 left-0">
+                            <h1 class="text-white text-[29px]">White Flower</h1>
+                            <p class="text-white"><a href="">more information →</a></p>
+                        </div>
+                    </div>
+
+                    <div class="group object-cover relative min-w-[268px] max-w-[350px] w-full max-xl:justify-self-end max-sm:origin-center overflow-hidden">
+                        <img src="./assets/colorful3.png" alt="" class="w-full">
+                        <div class="group-hover:translate-y-0 translate-y-[100%] duration-500 h-full w-full flex flex-col items-center justify-center text-center gap-3 bg-[#012C26B5] absolute top-0 left-0">
+                            <h1 class="text-white text-[29px]">Purple Flower</h1>
+                            <p class="text-white"><a href="">more information →</a></p>
+                        </div>
+                    </div>
+
+                    <div class="group object-cover relative min-w-[268px] max-w-[350px] w-full  max-sm:origin-center overflow-hidden">
+                        <img src="./assets/colorful4.png" alt="" class="w-full">
+                        <div class="group-hover:translate-y-0 translate-y-[100%] duration-500 h-full w-full flex flex-col items-center justify-center text-center gap-3 bg-[#012C26B5] absolute top-0 left-0">
+                            <h1 class="text-white text-[29px]">Red Flower</h1>
+                            <p class="text-white"><a href="">more information →</a></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- colorful_cards end -->
+
+        <!-- plant start -->
+        <section class="py-20">
+            <div class="container mx-auto px-8 max-w-[1158px]">
+                <div class="flex justify-between items-end">
+                    <h1 class="text-[#004F44] text-[40px]">Plant stands</h1>
+                </div>
+
+                <div class="flex gap-6 justify-between items-center mt-[37px] max-lg:flex-col">
+                    
+                    <div class="object-cover">
+                        <img src="./assets/product1.png" alt="product">
+                    </div>
+                    
+                    <div class="object-cover">
+                        <img src="./assets/product2.png" alt="product">
+                    </div>
+                    
+                    <div class="object-cover">
+                        <img src="./assets/product3.png" alt="product">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- plant end -->
+
+        <!-- free_shipping start -->
+        <section>
+            <div class="container mx-auto px-8 max-w-[1158px]">
+                <div class="bg-[url('./assets/shipping.png')] bg-no-repeat pt-[58px] pl-[55px] max-sm:pt-[10px]">
+                    <h2 class="text-[#9C6955] text-[44px] max-sm:text-[30px]">Free Shipping Services</h2>
+                    <p class="text-[#9C6955] text-[17px] mt-[10px]">*only for the same region</p>
+
+                    <ul class="mt-[62px] pb-[97px] max-sm:mt-[10px]">
+                        <li class="text-[#9C6955] flex items-center before:content-[url(./assets/phone_icon.svg)] before:mr-[13px] cursor-pointer"><a class="translate-y-[-10%]" href="tel:+621189271900">+62 1189-2719-00</a></li>
+                        <li class="text-[#9C6955] flex items-center before:content-[url(./assets/email_icon.svg)] before:mr-[13px] cursor-pointer"><a class="translate-y-[-10%]" href="mailto:order@platify.co">order@platify.co</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- free_shipping end -->
+
+        <!-- map start -->
+        <section class="py-[139px]">
+            <div class="container relative mx-auto px-8 group/container max-w-[1158px]">
+                <div class="absolute bg-white z-10 p-7 max-w-[515px] h-[231px] group/map hover:group-hover/container:max-w-[515px] duration-500 w-full m-7 overflow-hidden group-hover/container:max-w-[5px] max-sm:hidden">
+                    <h2 class="text-[#0A1E1B] text-[24px] group-hover/container:opacity-0 group-hover/map:opacity-100">Visit us</h2>
+                    <p class="max-w-[243px] text-[#666666] py-2 group-hover/container:opacity-0 group-hover/map:opacity-100">Gekikara Street 16, Atalanta <br> 1327 Block M <br> Mardial, Sigure <br> T2G 0T2</p>
+                    <h6 class="underline text-black group-hover/container:opacity-0 group-hover/map:opacity-100">Open day <span class="no-underline text-[#666666]">: 11am–5:30pm everyday</span></h6>
+
+                    <p class="max-w-1 top-[65%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-10 absolute font-bold text-[20px] group-hover/map:hidden hidden group-hover/container:block">H<br>o<br>v<br>e<br>r</p>
+
+                    <a href="">
+                        <div class="absolute bg-[#004F44] group-hover/container:text-[#004F44] group-hover/map:text-white top-0 right-0 text-white text-sm py-[15px] px-[37px] before:content-[url(./assets/map_vector.svg)] before:mr-[10px] before:translate-x-[10%]">GET DIRECTIONS</div>
+                    </a>
+                </div>
+                <iframe class="w-full h-[287px] border-0 duration-500 brightness-[60%] group-hover/container:brightness-100 max-sm:brightness-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d366.1160128495251!2d-122.41758693360066!3d37.776107850827785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c3e5518f5%3A0xe5c7f2eb1e49e776!2sNEMA%20San%20Francisco!5e0!3m2!1sru!2s!4v1723732262188!5m2!1sru!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+        <!-- map end -->
+    </main>
+    <!-- main end -->
+
+    <!-- footer start -->
+    <footer class="bg-[#004F44] py-6">
+        <div class="container mx-auto px-8 max-w-[1158px]">
+            <div class="flex justify-between items-center text-white max-sm:flex-col max-sm:gap-[20px]">
+                <h1>© 2024 B1lol's team</h1>
+                <h1>Powered by: <a href="https://tailwindcss.com/" class="underline">Tailwind</a></h1>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+
+
+    <!-- JS -->
+    <script>
+        const nav_collection = document.getElementById('nav_collection');
+        const nav_close = document.getElementById('nav_close');
+        const nav_menu = document.getElementById('nav_menu');
+
+        let if_nav_open = false;
+
+        nav_menu.addEventListener('click' , () =>{
+            if (!if_nav_open) {
+                nav_collection.style.transform='translateX(0)'
+                if_nav_open = true;
+            } else{
+                nav_collection.style.transform=''
+                if_nav_open = false;
+            }
+        })
+
+        nav_close.addEventListener('click' , () =>{
+            if (!if_nav_open) {
+                nav_collection.style.transform='translateX(0)'
+                if_nav_open = true;
+            } else{
+                nav_collection.style.transform=''
+                if_nav_open = false;
+            }
+        })
+
+        const nav_user = document.getElementById('nav_user');
+        const user_dropdown = document.getElementById('user_dropdown');
+
+        let if_user_open = false;
+
+        nav_user.addEventListener('click' , () =>{
+            if (!if_user_open) {
+                user_dropdown.classList.remove('hidden');
+                user_dropdown.classList.add('flex');
+                if_user_open = true;
+            } else {
+                user_dropdown.classList.add('hidden');
+                user_dropdown.classList.remove('flex');
+                if_user_open = false;
+            }
+        })
+    </script>
+</body>
+</html>

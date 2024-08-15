@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- webpage icon -->
+    <link rel="icon" type="image/png" href="./assets/Logo.png">
+</head>
+<body class="before:fixed before:z-[999] before:content-['Sorry_but_this_device_is_not_supported'] before:max-w-[100px] before:px-[32px] before:text-[25px] before:text-center before:text-white before:flex before:justify-center before:items-center before:font-bold before:min-h-full before:min-w-full before:bg-black min-[330px]:before:hidden">
+    <!-- header start -->
+    <header class="fixed w-full text-white bg-[#004F44] z-50">
+        <div class="container mx-auto px-8 max-w-[1158px]">
+            <nav class="flex items-center py-[21px] max-lg:justify-between">
+                <ul id="nav_collection" class="flex gap-10 duration-500 max-lg:translate-x-[-100%] max-lg:flex-col max-lg:absolute max-lg:py-[50px] max-lg:px-[80px] max-lg:top-0 max-lg:left-0 max-lg:text-center max-lg:text-3xl max-lg:bg-[#346456] max-lg:min-h-[100vh]">
+                    <li>
+                        <a href="">Shop</a>
+                    </li>
+                    <li>
+                        <select name="Products" class="bg-transparent outline-none cursor-pointer" id="nav_products">
+                            <option value="null" class="text-[#004F44] text-lg font-semibold">Products</option>
+                            <option value="Flowers" class="text-[#004F44] text-lg font-semibold">Flowers</option>
+                            <option value="Plants" class="text-[#004F44] text-lg font-semibold">Plants</option>
+                        </select>
+                    </li>
+                    <li>
+                        <a href="">Fertilizer</a>
+                    </li>
+                    <li>
+                        <a href="">Guide</a>
+                    </li>
+
+                    <div class="flex-col gap-[20px] hidden max-lg:flex max-lg:items-center">
+                        <li class="cursor-pointer">
+                            <img src="./assets/search.svg" alt="search">
+                        </li>
+    
+                        <li class="cursor-pointer relative" id="nav_user">
+                            <img src="./assets/user.svg" alt="user">
+                            
+                            <div class="absolute rounded-lg flex-col mt-3 gap-2 hidden" id="user_dropdown">
+                                <a href="./login.html">
+                                    <button class="rounded text-sm py-2 shadow-[0px_0px_24px_5px_#4d7c0f] bg-[#004F44] w-32">Log in</button>
+                                </a>
+                                <a href="./signin.html">
+                                    <button class="rounded text-sm py-2 shadow-[0px_0px_24px_5px_#4d7c0f]  bg-[#004F44] w-32">Sign in</button>
+                                </a>
+                            </div>
+                        </li>
+    
+                        <li class="cursor-pointer">
+                            <img src="./assets/shopping_cart.svg" alt="shopping_cart">
+                        </li>
+                    </div>
+
+                    <li id="nav_close" class="text-[35px] hidden max-lg:block">
+                        ✕
+                    </li>
+                </ul>
+                    
+                
+                <div class="flex-1 ml-[13%] max-lg:ml-0 max-lg:flex-none">
+                    <a href="./index.html">
+                        <img src="./assets/Logo.png" alt="Logo">
+                    </a>
+                </div>
+
+                <div class="text-3xl hidden max-lg:block" id="nav_menu">☰</div>
+
+                <ul class="flex gap-[14px] max-lg:hidden">
+                    <li class="cursor-pointer">
+                        <img src="./assets/search.svg" alt="search">
+                    </li>
+
+                    <li class="cursor-pointer relative" id="nav_user">
+                        <img src="./assets/user.svg" alt="user">
+                        
+                        <div class="absolute rounded-lg bg-[#346456] flex-col px-10 py-5 right-0 mt-3 gap-2 hidden" id="user_dropdown">
+                            <a href="./login.html">
+                                <button class="rounded px-8 py-3 shadow-[0px_0px_24px_5px_#4d7c0f] bg-[#004F44] w-32">Log in</button>
+                            </a>
+                            <a href="./signin.html">
+                                <button class="rounded px-8 py-3 shadow-[0px_0px_24px_5px_#4d7c0f]  bg-[#004F44] w-32">Sign in</button>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="cursor-pointer">
+                        <img src="./assets/shopping_cart.svg" alt="shopping_cart">
+                    </li>
+                </ul>
+            </nav>            
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- main start -->
+    <main>
+        <section class="min-h-screen bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+            <div class="sm:mx-auto sm:w-full sm:max-w-md">
+                <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
+                    Log in to your account
+                </h2>
+                <p class="mt-2 text-center text-sm text-gray-600 max-w">
+                    Or
+                    <a href="./signin.html" class="font-medium text-blue-600 hover:text-blue-500">
+                        create an account
+                    </a>
+                </p>
+            </div>
+        
+            <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+                <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+                    <form class="space-y-6" action="#" method="POST">
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">
+                                Email address
+                            </label>
+                            <div class="mt-1">
+                                <input id="email" name="email" type="email" autocomplete="email" required
+                                    class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                                    placeholder="Enter your email address">
+                            </div>
+                        </div>
+        
+                        <div>
+                            <label for="password" class="block text-sm font-medium text-gray-700">
+                                Password
+                            </label>
+                            <div class="mt-1">
+                                <input id="password" name="password" type="password" autocomplete="current-password" required
+                                    class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                                    placeholder="Enter your password">
+                            </div>
+                        </div>
+        
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <input id="remember_me" name="remember_me" type="checkbox"
+                                    class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
+                                <label for="remember_me" class="ml-2 block text-sm text-gray-900">
+                                    Remember me
+                                </label>
+                            </div>
+        
+                            <div class="text-sm">
+                                <a href="#" class="font-medium text-blue-600 hover:text-blue-500">
+                                    Forgot your password?
+                                </a>
+                            </div>
+                        </div>
+        
+                        <div>
+                            <button type="submit"
+                                class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-[#004F44] hover:bg-[#227267] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#227267]">
+    
+                                Log in
+                            </button>
+                        </div>
+                    </form>
+                    <div class="mt-6">
+        
+                        <div class="relative">
+                            <div class="absolute inset-0 flex items-center">
+                                <div class="w-full border-t border-gray-300"></div>
+                            </div>
+                            <div class="relative flex justify-center text-sm">
+                                <span class="px-2 bg-gray-100 text-gray-500">
+                                    Or continue with
+                                </span>
+                            </div>
+                        </div>
+        
+                        <div class="mt-6 grid grid-cols-3 gap-3">
+                            <div>
+                                <a href="#"
+                                    class="w-full flex items-center justify-center px-8 py-3 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
+                                    <img class="h-5 w-5" src="https://www.svgrepo.com/show/512120/facebook-176.svg"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#"
+                                    class="w-full flex items-center justify-center px-8 py-3 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
+                                    <img class="h-5 w-5" src="https://www.svgrepo.com/show/513008/twitter-154.svg"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#"
+                                    class="w-full flex items-center justify-center px-8 py-3 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
+                                    <img class="h-6 w-6" src="https://www.svgrepo.com/show/506498/google.svg"
+                                        alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- main end -->
+
+    <!-- footer start -->
+    <footer class="bg-[#004F44] py-6">
+        <div class="container mx-auto px-8 max-w-[1158px]">
+            <div class="flex justify-between items-center text-white max-sm:flex-col max-sm:gap-[20px]">
+                <h1>© 2024 B1lol's team</h1>
+                <h1>Powered by: <a href="https://tailwindcss.com/" class="underline">Tailwind</a></h1>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+
+
+    <!-- JS -->
+    <script>
+        const nav_collection = document.getElementById('nav_collection');
+        const nav_close = document.getElementById('nav_close');
+        const nav_menu = document.getElementById('nav_menu');
+
+        let if_nav_open = false;
+
+        nav_menu.addEventListener('click' , () =>{
+            if (!if_nav_open) {
+                nav_collection.style.transform='translateX(0)'
+                if_nav_open = true;
+            } else{
+                nav_collection.style.transform=''
+                if_nav_open = false;
+            }
+        })
+
+        nav_close.addEventListener('click' , () =>{
+            if (!if_nav_open) {
+                nav_collection.style.transform='translateX(0)'
+                if_nav_open = true;
+            } else{
+                nav_collection.style.transform=''
+                if_nav_open = false;
+            }
+        })
+
+        const nav_user = document.getElementById('nav_user');
+        const user_dropdown = document.getElementById('user_dropdown');
+
+        let if_user_open = false;
+
+        nav_user.addEventListener('click' , () =>{
+            if (!if_user_open) {
+                user_dropdown.classList.remove('hidden');
+                user_dropdown.classList.add('flex');
+                if_user_open = true;
+            } else {
+                user_dropdown.classList.add('hidden');
+                user_dropdown.classList.remove('flex');
+                if_user_open = false;
+            }
+        })
+    </script>
+</body>
+</html>
