@@ -76,10 +76,10 @@
                         <img src="./assets/search.svg" alt="search">
                     </li>
 
-                    <li class="cursor-pointer relative" id="nav_user">
+                    <li class="cursor-pointer relative" id="nav_user1">
                         <img src="./assets/user.svg" alt="user">
                         
-                        <div class="absolute rounded-lg bg-[#346456] flex-col px-10 py-5 right-0 mt-3 gap-2 hidden" id="user_dropdown">
+                        <div class="absolute rounded-lg bg-[#346456] flex-col px-10 py-5 right-0 mt-3 gap-2 hidden" id="user_dropdown1">
                             <a href="./login.html">
                                 <button class="rounded px-8 py-3 shadow-[0px_0px_24px_5px_#4d7c0f] bg-[#004F44] w-32">Log in</button>
                             </a>
@@ -247,7 +247,9 @@
         })
 
         const nav_user = document.getElementById('nav_user');
+        const nav_user1 = document.getElementById('nav_user1');
         const user_dropdown = document.getElementById('user_dropdown');
+        const user_dropdown1 = document.getElementById('user_dropdown1');
 
         let if_user_open = false;
 
@@ -259,6 +261,17 @@
             } else {
                 user_dropdown.classList.add('hidden');
                 user_dropdown.classList.remove('flex');
+                if_user_open = false;
+            }
+        })
+        nav_user1.addEventListener('click' , () =>{
+            if (!if_user_open) {
+                user_dropdown1.classList.remove('hidden');
+                user_dropdown1.classList.add('flex');
+                if_user_open = true;
+            } else {
+                user_dropdown1.classList.add('hidden');
+                user_dropdown1.classList.remove('flex');
                 if_user_open = false;
             }
         })
